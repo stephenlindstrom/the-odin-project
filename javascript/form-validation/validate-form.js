@@ -28,7 +28,7 @@ const constraints = {
   ],
 };
 
-email.addEventListener('input', () => {
+email.addEventListener('focusout', () => {
   if (email.validity.valid) {
     emailError.textContent = '';
     emailError.className = 'error';
@@ -38,7 +38,7 @@ email.addEventListener('input', () => {
   }
 });
 
-zip.addEventListener('input', () => {
+zip.addEventListener('focusout', () => {
   if (zipIsValid()) {
     zipError.textContent = '';
     zipError.className = 'error';
@@ -48,7 +48,7 @@ zip.addEventListener('input', () => {
   }
 });
 
-password1.addEventListener('input', () => {
+password1.addEventListener('focusout', () => {
   if (passwordIsValid()) {
     password1Error.textContent = '';
     password1Error.className = 'error';
@@ -56,16 +56,9 @@ password1.addEventListener('input', () => {
   } else {
     showPassword1Error ();  
   }
-
-  if (passwordsMatch()) {
-    password2Error.textContent = '';
-    password2Error.className = 'error';
-  } else {
-    showPassword2Error ();
-  }
 });
 
-password2.addEventListener('input', () => {
+password2.addEventListener('focusout', () => {
   if (passwordsMatch()) {
     password2Error.textContent = '';
     password2Error.className = 'error';
