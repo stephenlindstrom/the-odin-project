@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  width: 300px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+}
+
+input, button, select { 
+  display: block;
+  height: 1.9rem;
+  width: 300px;
+  border-radius: 4px;
+  border-color: #E5E7EB;
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 10px 5px;
+}
+
+
+input:focus, select:focus {
+  outline: none;
+  border: 3px solid rgb(144, 144, 229);
+  box-shadow: 2px 2px 2px rgb(191, 185, 185);
+}
+
+input:not(:focus).invalid {
+  border: 3px solid rgb(235, 130, 130);
+}
+
+span {
+  display: block;
+  width: 300px;
+}
+
+.container {
+  margin-bottom: 1rem;
+}
